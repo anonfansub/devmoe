@@ -13,7 +13,7 @@ maybe you must run 'cpanm Filter::Crypto' via cmd to install the module
 How to use
 
 --cry_update.pl is self explanatory (it gets the latest runes.json and version.txt)
---cry_injector, runemap.json, runes.json, version.txt must be in the same dir 
+--cry_injector.pl, runemap.json, runes.json, version.txt must be in the same dir 
 1.Open lol client and login into your account
 2.Disable premade runes (prevent current rune errors)
 3.Keep at least 1 custom rune page and delete all others 
