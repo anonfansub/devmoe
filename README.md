@@ -24,7 +24,7 @@ If it doesn't work try running via cmd so you can see perl output
 
 Any question? 
 --no, it's not bannable, does the same shit as blitz, porofessor 
---it's not open code just because some idiot could mess around with my runes source
+--it's encrypted just because some idiot could mess around with my runes source
 
 You can find me at 
 my discord channel: https://discord.gg/4282y8EGxP id: awface#3260
