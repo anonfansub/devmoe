@@ -8,6 +8,7 @@ Makes lol API requests to determine selected champion for the user then do some 
 Requirements
 
 Strawberry Perl (32 bit preferably)
+maybe you must run 'cpanm Filter::Crypto' via cmd to install the module
 
 How to use
 
