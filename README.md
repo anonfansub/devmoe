@@ -15,7 +15,7 @@ How to use
 --cry_update.pl is self explanatory (it gets the latest runes.json and version.txt)
 --cry_injector.pl, runemap.json, runes.json, version.txt must be in the same dir 
 1.Open lol client and login into your account
-2.Disable premade runes (prevent current rune errors)
+2.check hide preset pages (prevent current rune errors)
 3.Keep at least 1 custom rune page and delete all others 
 4.Run cry_injector.pl after confirming the champion at selection / joining the lobby (for ARAM)
 
