@@ -36,3 +36,4 @@ Special thanks
 zamanf for the perl base script
 stirrante for the rune pages edit method
 ```
+*included runedit.html where you can generate the hexa code
