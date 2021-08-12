@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Rune Editor</title>
+  <link rel="shortcut icon" href="favlol.ico" />
+	<style>
+		table,td,tr{border: 1px solid white; color: yellow}
+		img{width: 30px;}
+		.tuts{display:inline-block;}
+		button{margin-left:70px}
+		body{background-color: #1f0326;}
+		form{
+			background-color: #957593;
+			border: 1px solid white;
+			width: 200px;
+			padding: 10px;
+		}
+		.pre{background-color:#DCF56A;}
+		.dom{background-color:#F23F3F;}
+		.sor{	background-color:#C53FF2;}
+		.res{background-color:#80E551;}
+		.ins{background-color:#6ABBF5;}
+	</style>
+</head>
+<body>
+<div class="tuts">
+<form id="myForm" onsubmit="return false">
+  Primary: 
+  <select name="path1" id="path1">
+  <option class="pre" value="1">Precision</option>
+  <option class="dom" value="2">Domination</option>
+  <option class="sor" value="3">Sorcery</option>
+  <option class="res" value="4">Resolve</option>
+  <option class="ins" value="5">Inspiration</option>
+  </select>
+  <p>
+  <input type="radio" id="a1" name="A" value="1" checked="">
+  <label for="a1">1</label>
+  <input type="radio" id="a2" name="A" value="2">
+  <label for="a2">2</label>
+  <input type="radio" id="a3" name="A" value="3">
+  <label for="a3">3</label>
+  <input type="radio" id="a4" name="A" value="4">
+  <label for="a4">4</label>
+	<br>
+  <input type="radio" id="b1" name="B" value="4" checked="">
+  <label for="b1">1</label>
+  <input type="radio" id="b2" name="B" value="5">
+  <label for="b2">2</label>  
+  <input type="radio" id="b3" name="B" value="6">
+  <label for="b3">3</label>
+	<br>
+  <input type="radio" id="c1" name="C" value="7" checked="">
+  <label for="c1">1</label>
+  <input type="radio" id="c2" name="C" value="8">
+  <label for="c2">2</label>
+  <input type="radio" id="c3" name="C" value="9">
+  <label for="c3">3</label>
+	<br>
+  <input type="radio" id="d1" name="D" value="10" checked="">
+  <label for="d1">1</label>
+  <input type="radio" id="d2" name="D" value="11">
+  <label for="d2">2</label>
+  <input type="radio" id="d3" name="D" value="12">
+  <label for="d3">3</label>  
+  <input type="radio" id="d4" name="D" value="13">
+  <label for="d4">4</label></p>
+  Secondary: 
+  <select name="path2" id="path2">
+	<option class="pre" value="1">Precision</option>
+	<option class="dom" value="2">Domination</option>
+  <option class="sor" value="3">Sorcery</option>
+  <option class="res" value="4">Resolve</option>
+  <option class="ins" value="5">Inspiration</option>
+  </select>
+  <p>
+  <input type="checkbox" id="xek4" name="xek" value="4" checked>
+  <label for="xek4">1</label>
+  <input type="checkbox" id="xek5" name="xek" value="5">
+  <label for="xek5">2</label>  
+  <input type="checkbox" id="xek6" name="xek" value="6">
+  <label for="xek6">3</label>	<br>
+  <input type="checkbox" id="xek7" name="xek" value="7" checked>
+  <label for="xek7">1</label>
+  <input type="checkbox" id="xek8" name="xek" value="8">
+  <label for="xek8">2</label>
+  <input type="checkbox" id="xek9" name="xek" value="9">
+  <label for="xek9">3</label>	<br>
+  <input type="checkbox" id="xek10" name="xek" value="10">
+  <label for="xek10">1</label>
+  <input type="checkbox" id="xek11" name="xek" value="11">
+  <label for="xek11">2</label>
+  <input type="checkbox" id="xek12" name="xek" value="12">
+  <label for="xek12">3</label>  
+  <input type="checkbox" id="xek13" name="xek" value="13">
+  <label for="xek13">4</label>
+	</p>
+  <p>
+  <input type="radio" id="g1" name="G" value="1" checked=""> 
+  <label for="g1">dmg</label>
+  <input type="radio" id="g2" name="G" value="2">
+  <label for="g2">atk sp</label>
+  <input type="radio" id="g3" name="G" value="3">
+  <label for="g3">cdr</label>
+  <p>
+  <input type="radio" id="h1" name="H" value="1" checked="">
+  <label for="h1">dmg</label>
+  <input type="radio" id="h2" name="H" value="4">
+  <label for="h2">armor</label>  
+  <input type="radio" id="h3" name="H" value="5">
+  <label for="h3">mr</label></p>
+  <p>
+  <input type="radio" id="i1" name="I" value="4" checked="">
+  <label for="i1">.life</label>
+  <input type="radio" id="i2" name="I" value="5">
+  <label for="i2">armor</label>
+  <input type="radio" id="i3" name="I" value="6">
+  <label for="i3">mr</label></p>
+  <button onclick="get()">Get</button>
+</form>
+</div>
+<div class="tuts" style="position: absolute; top:10px; margin-left:10px">
+	<table>
+		<tbody>
+			<tr>
+				<td>1234</td><td>123</td><td>123</td><td>1234</td>
+			</tr>
+			<tr>
+			<td><img src="https://i.ibb.co/FYMhZg8/Press-The-Attack.png" alt="Press-The-Attack"><img src="https://i.ibb.co/71k2Dvb/Lethal-Tempo.png" alt="Lethal-Tempo"><img src="https://i.ibb.co/yBTLBgQ/Fleet-Footwork.png" alt="Fleet-Footwork"><img src="https://i.ibb.co/DC5GMJ0/Conqueror.png" alt="Conqueror"></td>
+			<td><img src="https://i.ibb.co/2v47xNh/Overheal.png" alt="Overheal"><img src="https://i.ibb.co/56k7tFY/Triumph.png" alt="Triumph"><img src="https://i.ibb.co/ySjDNTS/Presence-Of-Mind.png" alt="Presence-Of-Mind"></td>
+			<td><img src="https://i.ibb.co/mD6NWMm/Legend-Alacrity.png" alt="Legend-Alacrity"><img src="https://i.ibb.co/TwGTD0z/Legend-Tenacity.png" alt="Legend-Tenacity"><img src="https://i.ibb.co/vszsD0N/Legend-Bloodline.png" alt="Legend-Bloodline"></td>
+			<td><img src="https://i.ibb.co/x6VjTRQ/Coup-De-Grace.png" alt="Coup-De-Grace"><img src="https://i.ibb.co/1X8sxXf/CutDown.png" alt="CutDown"><img src="https://i.ibb.co/jHDswHz/Last-Stand.png" alt="Last-Stand"></td>
+		</tr>
+		<tr>
+			<td><img src="https://i.ibb.co/ZTsCrDn/Electrocute.png" alt="Electrocute"><img src="https://i.ibb.co/twGJ4Vq/Predator.png" alt="Predator"><img src="https://i.ibb.co/ZgY9w1J/Dark-Harvest.png" alt="Dark-Harvest"><img src="https://i.ibb.co/gmNGSq6/Hail-Of-Blades.png" alt="Hail-Of-Blades"></td>
+			<td><img src="https://i.ibb.co/bPgr4T7/Cheap-Shot.png" alt="Cheap-Shot"><img src="https://i.ibb.co/k54PzmN/Taste-Of-Blood.png" alt="Taste-Of-Blood"><img src="https://i.ibb.co/j4zpbQC/Sudden-Impact.png" alt="Sudden-Impact"></td>
+			<td><img src="https://i.ibb.co/VxQjZL8/Zombie-Ward.png" alt="Zombie-Ward"><img src="https://i.ibb.co/SRRSvVG/Ghost-Poro.png" alt="Ghost-Poro"><img src="https://i.ibb.co/SPHyDCt/Eyeball-Collection.png" alt="Eyeball-Collection"></td>
+			<td><img src="https://i.ibb.co/D8wQCF1/Ravenous-Hunter.png" alt="Ravenous-Hunter"><img src="https://i.ibb.co/F4mdzdM/Ingenious-Hunter.png" alt="Ingenious-Hunter"><img src="https://i.ibb.co/MkKtW75/Relentless-Hunter.png" alt="Relentless-Hunter" border="0"><img src="https://i.ibb.co/prZNLdC/Ultimate-Hunter.png" alt="Ultimate-Hunter"></td>
+		</tr>
+		<tr>
+			<td><img src="https://i.ibb.co/vVznWMR/Summon-Aery.png" alt="Summon-Aery"><img src="https://i.ibb.co/H4tk26x/Arcane-Comet.png" alt="Arcane-Comet"><img src="https://i.ibb.co/JjHP7Tp/Phase-Rush.png" alt="Phase-Rush"></td>
+			<td><img src="https://i.ibb.co/3BhctkJ/Pokeshield.png" alt="Pokeshield"><img src="https://i.ibb.co/RCWXVDW/Manaflow-Band.png" alt="Manaflow-Band"><img src="https://i.ibb.co/1qGrwjc/6361.png" alt="6361"></td>
+			<td><img src="https://i.ibb.co/gZqRCZ8/Transcendence.png" alt="Transcendence"><img src="https://i.ibb.co/bvBPs24/Celerity-Temp.png" alt="Celerity-Temp"><img src="https://i.ibb.co/pX7mJX8/Absolute-Focus.png" alt="Absolute-Focus"></td>
+			<td><img src="https://i.ibb.co/VvBJsf1/Scorch.png" alt="Scorch" border="0"><img src="https://i.ibb.co/LpqpySS/Waterwalking.png" alt="Waterwalking"><img src="https://i.ibb.co/D1kj8Ym/Gathering-Storm.png" alt="Gathering-Storm"></td>
+		</tr>
+		<tr>
+			<td><img src="https://i.ibb.co/M9xC5YS/Grasp-Of-The-Undying.png" alt="Grasp-Of-The-Undying"><img src="https://i.ibb.co/8j2SZSW/Veteran-Aftershock.png" alt="Veteran-Aftershock"><img src="https://i.ibb.co/k1dMfVB/Guardian.png" alt="Guardian"></td>
+			<td><img src="https://i.ibb.co/ZYw7Rgq/Demolish.png" alt="Demolish"><img src="https://i.ibb.co/Wf0SDpn/Font-Of-Life.png" alt="Font-Of-Life"><img src="https://i.ibb.co/68Wdzr4/Mirror-Shell.png" alt="Mirror-Shell"></td>
+			<td><img src="https://i.ibb.co/M9fMBnd/Conditioning.png" alt="Conditioning"><img src="https://i.ibb.co/QNgkvvj/Second-Wind.png" alt="Second-Wind" border="0"><img src="https://i.ibb.co/mRNW3SG/Bone-Plating.png" alt="Bone-Plating"></td>
+			<td><img src="https://i.ibb.co/pLmhM1f/Overgrowth.png" alt="Overgrowth"><img src="https://i.ibb.co/L8pYJJj/Revitalize.png" alt="Revitalize" border="0"><img src="https://i.ibb.co/YkW1thP/Unflinching.png" alt="Unflinching"></td>
+		</tr>
+		<tr>
+			<td><img src="https://i.ibb.co/jRyxg4X/Glacial-Augment.png" alt="Glacial-Augment"><img src="https://i.ibb.co/1Qxzm5s/Unsealed-Spellbook.png" alt="Unsealed-Spellbook"><img src="https://i.ibb.co/b2JwSKW/Master-Key.png" alt="Master-Key"></td>
+			<td><img src="https://i.ibb.co/cJ7nYMv/Hextech-Flashtraption.png" alt="Hextech-Flashtraption"><img src="https://i.ibb.co/3WmRy39/Magical-Footwear.png" alt="Magical-Footwear"><img src="https://i.ibb.co/hV02PB1/Perfect-Timing.png" alt="Perfect-Timing"></td>
+			<td><img src="https://i.ibb.co/ck5cfPK/Futures-Market.png" alt="Futures-Market"><img src="https://i.ibb.co/9HWC3XF/Minion-Dematerializer.png" alt="Minion-Dematerializer"><img src="https://i.ibb.co/1ZrBs53/Biscuit-Delivery.png" alt="Biscuit-Delivery"></td>
+			<td><img src="https://i.ibb.co/ZxKbpym/Cosmic-Insight.png" alt="Cosmic-Insight"><img src="https://i.ibb.co/TknRYh0/Approach-Velocity.png" alt="Approach-Velocity"><img src="https://i.ibb.co/DVW8Fbb/Time-Warp-Tonic.png" alt="Time-Warp-Tonic"></td>
+		</tr>
+	</tbody>
+</table>
+<p id="demo" style="color:white;"></p>
+<p id="result" style="color:#DA1546;"></p>
+</div>
+<script>
+	var d = new Date();
+	document.getElementById("demo").innerHTML = d;
+	function get(){
+	var mod1 = 0;
+	var mod2 = 0;
+	var xekes = '';
+	var valor = 0;
+	var trio1 = parseInt(document.getElementById("path1").value,10);
+  var trio2 = parseInt(document.querySelector('input[name="A"]:checked').value,10);
+	if (trio1 < 3)
+		mod1 = 1;
+	var trio3 = parseInt(document.querySelector('input[name="B"]:checked').value,10) + mod1;
+	var trio4 = parseInt(document.querySelector('input[name="C"]:checked').value,10) + mod1;
+	var trio5 = parseInt(document.querySelector('input[name="D"]:checked').value,10) + mod1;
+	var trio6 = parseInt(document.getElementById("path2").value,10);
+	if (trio6 < 3)
+		mod2 = 1;
+	var markedCheckbox = document.getElementsByName('xek');  
+  for (var checkbox of markedCheckbox) {  
+    if (checkbox.checked){
+      valor	=	parseInt(checkbox.value,10) + mod2;
+      xekes = xekes + valor.toString(16);
+		}			
+  }  	
+	var trio9 = document.querySelector('input[name="G"]:checked').value;
+	var trio10 = document.querySelector('input[name="H"]:checked').value;
+	var trio11 = document.querySelector('input[name="I"]:checked').value;
+  var res = "".concat(trio1,trio2.toString(16),trio3.toString(16),trio4.toString(16),trio5.toString(16),trio6,xekes,trio9,trio10,trio11);
+	document.getElementById("result").innerHTML = "hexa: " + res;
+	//document.getElementById("myForm").reset();
+}
+</script>
+</body>
+</html>
