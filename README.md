@@ -8,16 +8,15 @@ Makes lol API requests to determine selected champion for the user then do some 
 Requirements
 
 Strawberry Perl (32 bit preferably)
-maybe you must run 'cpanm Filter::Crypto' via cmd to install the module
 
 How to use
 
---cry_update.pl is self explanatory (it gets the latest runes.json and version.txt)
---cry_injector.pl, runemap.json, runes.json, version.txt must be in the same dir 
+--update.pl is self explanatory (it gets the latest runes.json and version.txt)
+--injector.pl, runemap.json, runes.json, version.txt must be in the same dir 
 1.Open lol client and login into your account
 2.check hide preset pages (prevent current rune errors)
 3.Keep at least 1 custom rune page and delete all others 
-4.Run cry_injector.pl after confirming the champion at selection / joining the lobby (for ARAM)
+4.Run injector.pl after confirming the champion at selection / joining the lobby (for ARAM)
 
 Debug
 
@@ -25,7 +24,6 @@ If it doesn't work try running via cmd so you can see perl output
 
 Any question? 
 --no, it's not bannable, does the same shit as blitz, porofessor 
---it's encrypted just because some idiot could mess around with my runes source
 
 You can find me at 
 my discord channel: https://discord.gg/4282y8EGxP id: awface#3260
@@ -37,3 +35,4 @@ zamanf for the perl base script
 stirrante for the rune pages edit method
 ```
 *included runedit.html where you can generate the hexa code
+**code is now open
